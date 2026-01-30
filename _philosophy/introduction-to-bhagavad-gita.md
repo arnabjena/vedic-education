@@ -345,10 +345,10 @@ The Bhagavad Gita is not meant to be just read but lived. As you explore its tea
 ## Next Steps
 
 To deepen your understanding of the Gita:
-- Read [Chapter-by-Chapter Summaries](#) (coming soon)
-- Explore [Karma Yoga in Detail](#)
-- Study [The Concept of Dharma](#)
-- Practice [Meditation Techniques from the Gita](#)
+- Study [The Concept of Dharma]({{ site.baseurl }}{% link _values/what-is-dharma.md %})
+- Explore [Understanding Karma]({{ site.baseurl }}{% link _values/understanding-karma.md %})
+- Read [The Four Goals of Life]({{ site.baseurl }}{% link _values/four-goals-of-life.md %})
+- Learn about [The Four Stages of Life]({{ site.baseurl }}{% link _values/four-stages-of-life.md %})
 
 ---
 

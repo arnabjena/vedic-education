@@ -90,16 +90,16 @@ Remember: Vedic knowledge is not about blind belief but about understanding, que
 ---
 
 **Next Steps:**
-- Learn about the [Four Vedas](#)
-- Explore [Vedic Values](#)
-- Read [Puranic Stories](#)
-- Understand [The Bhagavad Gita](#)
+- Learn about the [Four Vedas]({{ site.baseurl }}{% link _vedic_literature/the-four-vedas-comprehensive.md %})
+- Explore [What is Dharma?]({{ site.baseurl }}{% link _values/what-is-dharma.md %})
+- Read [The Story of Lord Rama]({{ site.baseurl }}{% link _stories/rama-story-part1.md %})
+- Understand [The Bhagavad Gita]({{ site.baseurl }}{% link _philosophy/introduction-to-bhagavad-gita.md %})
 
 **Related Topics:**
-- What is Dharma?
-- The Four Goals of Life
-- Understanding Karma
-- The Four Stages of Life
+- [What is Dharma?]({{ site.baseurl }}{% link _values/what-is-dharma.md %})
+- [The Four Goals of Life]({{ site.baseurl }}{% link _values/four-goals-of-life.md %})
+- [Understanding Karma]({{ site.baseurl }}{% link _values/understanding-karma.md %})
+- [The Four Stages of Life]({{ site.baseurl }}{% link _values/four-stages-of-life.md %})
 
 ---
 

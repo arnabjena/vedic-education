@@ -329,10 +329,10 @@ Understanding these goals helps answer: "What should I focus on?" The answer dep
 ## Next Steps
 
 To deepen your understanding:
-- Study [What is Dharma?](#) in detail
-- Explore [The Four Stages of Life (Ashramas)](#)
-- Read [The Bhagavad Gita](#) which discusses all four goals
-- Practice [Daily Reflection](#) incorporating all four goals
+- Study [What is Dharma?]({{ site.baseurl }}{% link _values/what-is-dharma.md %}) in detail
+- Explore [The Four Stages of Life (Ashramas)]({{ site.baseurl }}{% link _values/four-stages-of-life.md %})
+- Read [The Bhagavad Gita]({{ site.baseurl }}{% link _philosophy/introduction-to-bhagavad-gita.md %}) which discusses all four goals
+- Practice daily reflection incorporating all four goals
 
 ---
 

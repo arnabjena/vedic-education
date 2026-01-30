@@ -194,10 +194,10 @@ As Krishna says in the Bhagavad Gita: "It is better to perform one's own dharma 
 ---
 
 **Next Steps:**
-- Explore [The Four Goals of Life](#)
-- Learn about [Karma and Its Laws](#)
-- Read [The Story of Rama - Dharma in Action](#)
-- Understand [The Four Stages of Life](#)
+- Explore [The Four Goals of Life]({{ site.baseurl }}{% link _values/four-goals-of-life.md %})
+- Learn about [Understanding Karma]({{ site.baseurl }}{% link _values/understanding-karma.md %})
+- Read [The Story of Rama - Dharma in Action]({{ site.baseurl }}{% link _stories/rama-story-part1.md %})
+- Understand [The Four Stages of Life]({{ site.baseurl }}{% link _values/four-stages-of-life.md %})
 
 **For Deeper Study:**
 - Bhagavad Gita Chapters 2, 3, and 18

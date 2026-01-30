@@ -175,10 +175,10 @@ The story becomes even more powerful as we see how Rama handles adversity and st
 ---
 
 **Related Content:**
-- [What is Dharma?](#)
-- [The Four Goals of Life](#)
-- [Introduction to the Puranas](#)
-- [Values in Ancient Stories](#)
+- [What is Dharma?]({{ site.baseurl }}{% link _values/what-is-dharma.md %})
+- [The Four Goals of Life]({{ site.baseurl }}{% link _values/four-goals-of-life.md %})
+- [Introduction to the Puranas]({{ site.baseurl }}{% link _puranas/introduction-to-puranas.md %})
+- [The Bhagavad Gita]({{ site.baseurl }}{% link _philosophy/introduction-to-bhagavad-gita.md %})
 
 **Discussion:**
 Share this story with your family and discuss what each person learned from it. Stories are best when shared and reflected upon together.
