@@ -721,7 +721,7 @@ title: Welcome to Vedic Wisdom for Families
   </div>
 
   <div class="featured-grid">
-    <a href="{{ site.baseurl }}{% link _vedic_sciences/vedic-astronomy-and-mathematics.md %}" class="featured-card">
+    <a href="{{ site.baseurl }}/vedic-sciences/vedic-astronomy-and-mathematics/" class="featured-card">
       <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&h=500&fit=crop" alt="Ancient Astronomy" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">Science</span>
@@ -730,7 +730,7 @@ title: Welcome to Vedic Wisdom for Families
       </div>
     </a>
 
-    <a href="{{ site.baseurl }}{% link _stories/rama-story-part1.md %}" class="featured-card">
+    <a href="{{ site.baseurl }}/stories/rama-story-part1/" class="featured-card">
       <img src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=800&h=500&fit=crop" alt="Ramayana" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #ff9a9e, #fecfef);">Stories</span>
@@ -739,7 +739,7 @@ title: Welcome to Vedic Wisdom for Families
       </div>
     </a>
 
-    <a href="{{ site.baseurl }}{% link _philosophy/introduction-to-bhagavad-gita.md %}" class="featured-card">
+    <a href="{{ site.baseurl }}/philosophy/introduction-to-bhagavad-gita/" class="featured-card">
       <img src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=800&h=500&fit=crop" alt="Bhagavad Gita" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">Philosophy</span>
@@ -748,7 +748,7 @@ title: Welcome to Vedic Wisdom for Families
       </div>
     </a>
 
-    <a href="{{ site.baseurl }}{% link _history/hindu-civilization-through-ages.md %}" class="featured-card">
+    <a href="{{ site.baseurl }}/history/hindu-civilization-through-ages/" class="featured-card">
       <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=800&h=500&fit=crop" alt="Hindu History" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #f857a6, #ff5858);">History</span>
@@ -757,7 +757,7 @@ title: Welcome to Vedic Wisdom for Families
       </div>
     </a>
 
-    <a href="{{ site.baseurl }}{% link _stories/krishna-childhood-stories.md %}" class="featured-card">
+    <a href="{{ site.baseurl }}/stories/krishna-childhood-stories/" class="featured-card">
       <img src="https://images.unsplash.com/photo-1604608672516-f1b9b1cfce7b?w=800&h=500&fit=crop" alt="Krishna" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #ff9a9e, #fecfef);">Stories</span>
@@ -766,7 +766,7 @@ title: Welcome to Vedic Wisdom for Families
       </div>
     </a>
 
-    <a href="{{ site.baseurl }}{% link _stories/mahabharata-introduction.md %}" class="featured-card">
+    <a href="{{ site.baseurl }}/stories/mahabharata-introduction/" class="featured-card">
       <img src="https://images.unsplash.com/photo-1609136176146-eb5d4cf4293d?w=800&h=500&fit=crop" alt="Mahabharata" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #ff9a9e, #fecfef);">Stories</span>
