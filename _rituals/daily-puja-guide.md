@@ -791,10 +791,8 @@ May I serve others with love.
 
 To deepen your practice:
 - Learn about [Hindu Festivals and Celebrations]({{ site.baseurl }}{% link _rituals/hindu-festivals-guide.md %})
-- Explore [Mantras and Their Meanings]({{ site.baseurl }}{% link _rituals/essential-mantras.md %})
-- Understand [The Concept of Prasad]({{ site.baseurl }}{% link _rituals/understanding-prasad.md %})
-- Read about [Creating Sacred Space at Home]({{ site.baseurl }}{% link _rituals/creating-sacred-space.md %})
 - Study [Introduction to the Bhagavad Gita]({{ site.baseurl }}{% link _philosophy/introduction-to-bhagavad-gita.md %})
+- Practice [Daily Meditation]({{ site.baseurl }}{% link _vedic_sciences/yoga-philosophy-and-practice.md %})
 
 ---
 

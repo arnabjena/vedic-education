@@ -857,7 +857,6 @@ Light of knowledge. Beginning of longer days (northward journey of sun - uttaray
 
 To deepen your festival practice:
 - Learn [Daily Puja Guide]({{ site.baseurl }}{% link _rituals/daily-puja-guide.md %}) for worship procedures
-- Explore [Essential Mantras]({{ site.baseurl }}{% link _rituals/essential-mantras.md %}) for different deities
 - Read [Stories]({{ site.baseurl }}/stories/) to understand festival legends
 - Study [What is Dharma]({{ site.baseurl }}{% link _values/what-is-dharma.md %}) to understand underlying values
 - Understand [The Four Goals of Life]({{ site.baseurl }}{% link _values/four-goals-of-life.md %})
