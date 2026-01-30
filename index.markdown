@@ -14,42 +14,42 @@ Welcome to a comprehensive platform for learning **authentic Vedic knowledge in 
 ## Explore by Category
 
 <div class="category-grid">
-  <a href="/vedic-literature/" class="category-card vedic-literature" style="text-decoration: none; color: inherit;">
+  <a href="{{ '/vedic-literature/' | relative_url }}" class="category-card vedic-literature" style="text-decoration: none; color: inherit;">
     <h3>📚 Vedic Literature</h3>
     <p>The Four Vedas, Upanishads, and foundational texts</p>
   </a>
 
-  <a href="/puranas/" class="category-card puranas" style="text-decoration: none; color: inherit;">
+  <a href="{{ '/puranas/' | relative_url }}" class="category-card puranas" style="text-decoration: none; color: inherit;">
     <h3>📖 Puranic Literature</h3>
     <p>Ramayana, Mahabharata, and 18 Mahapuranas</p>
   </a>
 
-  <a href="/philosophy/" class="category-card philosophy" style="text-decoration: none; color: inherit;">
+  <a href="{{ '/philosophy/' | relative_url }}" class="category-card philosophy" style="text-decoration: none; color: inherit;">
     <h3>🧘 Philosophy</h3>
     <p>Bhagavad Gita, Six Darshanas, Yoga Sutras</p>
   </a>
 
-  <a href="/vedic-sciences/" class="category-card vedic-sciences" style="text-decoration: none; color: inherit;">
+  <a href="{{ '/vedic-sciences/' | relative_url }}" class="category-card vedic-sciences" style="text-decoration: none; color: inherit;">
     <h3>🔬 Vedic Sciences</h3>
     <p>Ayurveda, Jyotisha, Yoga, Mathematics</p>
   </a>
 
-  <a href="/rituals/" class="category-card rituals" style="text-decoration: none; color: inherit;">
+  <a href="{{ '/rituals/' | relative_url }}" class="category-card rituals" style="text-decoration: none; color: inherit;">
     <h3>🕉️ Rituals & Practices</h3>
     <p>Puja, Festivals, Mantras, Samskaras</p>
   </a>
 
-  <a href="/values/" class="category-card values" style="text-decoration: none; color: inherit;">
+  <a href="{{ '/values/' | relative_url }}" class="category-card values" style="text-decoration: none; color: inherit;">
     <h3>💎 Values & Ethics</h3>
     <p>Dharma, Karma, Purusharthas, Virtues</p>
   </a>
 
-  <a href="/stories/" class="category-card stories" style="text-decoration: none; color: inherit;">
+  <a href="{{ '/stories/' | relative_url }}" class="category-card stories" style="text-decoration: none; color: inherit;">
     <h3>📚 Stories</h3>
     <p>Epic tales and Puranic stories with morals</p>
   </a>
 
-  <a href="/modern-applications/" class="category-card modern" style="text-decoration: none; color: inherit;">
+  <a href="{{ '/modern-applications/' | relative_url }}" class="category-card modern" style="text-decoration: none; color: inherit;">
     <h3>🌟 Modern Applications</h3>
     <p>Applying Vedic wisdom to daily life</p>
   </a>
