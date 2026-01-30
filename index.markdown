@@ -560,6 +560,7 @@ title: Welcome to Vedic Wisdom for Families
   <div class="hero-content">
     <div class="om-symbol">ॐ</div>
     <h1>Discover Vedic Wisdom<br>for Your Family</h1>
+    <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.5rem;">Version 2.0 - Updated Design</div>
     <p>Explore 3000+ years of Hindu knowledge, ancient sciences, epic stories, and timeless philosophy. From the Vedas to modern applications - comprehensive education rooted in authenticity.</p>
     <div>
       <a href="{{ '/vedic-literature/' | relative_url }}" class="hero-cta">Start Exploring</a>
