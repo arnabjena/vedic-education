@@ -446,3 +446,20 @@ tr:nth-child(even) {
   text-align: center;
   margin: var(--spacing-md) 0;
 }
+
+/* Tags */
+.tags {
+  margin-top: var(--spacing-xs);
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--bg-accent);
+  color: var(--text-secondary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #e8e8e8;
+}
