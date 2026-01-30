@@ -667,10 +667,10 @@ The greatest tribute to those who suffered is not revenge, but building a civili
 ## Next Steps
 
 To deepen your understanding:
-- Visit **[Introduction to Vedic Knowledge]({{ site.baseurl }}{% link _vedic_literature/introduction-to-vedic-knowledge.md %})** - the foundation
-- Explore **[Vedic Astronomy and Mathematics]({{ site.baseurl }}{% link _vedic_sciences/vedic-astronomy-and-mathematics.md %})** - ancient achievements
-- Read **[What is Dharma?]({{ site.baseurl }}{% link _values/what-is-dharma.md %})** - the guiding principle
-- Study **[The Mahabharata]({{ site.baseurl }}{% link _stories/mahabharata-introduction.md %})** - ethics in complex situations
+- Visit **[Introduction to Vedic Knowledge]({{ site.baseurl }}/vedic-literature/introduction-to-vedic-knowledge/)** - the foundation
+- Explore **[Vedic Astronomy and Mathematics]({{ site.baseurl }}/vedic-sciences/vedic-astronomy-and-mathematics/)** - ancient achievements
+- Read **[What is Dharma?]({{ site.baseurl }}/values/what-is-dharma/)** - the guiding principle
+- Study **[The Mahabharata]({{ site.baseurl }}/stories/mahabharata-introduction/)** - ethics in complex situations
 
 ---
 
