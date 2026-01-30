@@ -25,10 +25,10 @@ description: >- # this means to ignore newlines until "baseurl:"
   Puranas, philosophy, values, practices, and stories. A comprehensive family
   education platform for understanding ancient Indian wisdom and applying it to
   modern life.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/vedic-education" # the subpath of your site, e.g. /blog
+url: "https://arnabjena.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
-github_username:  arnabjena-ah
+github_username:  arnabjena
 
 # Build settings
 theme: minima
