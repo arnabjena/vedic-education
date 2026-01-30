@@ -68,6 +68,9 @@ collections:
   modern_applications:
     output: true
     permalink: /modern-applications/:path/
+  history:
+    output: true
+    permalink: /history/:path/
 
 # Include custom pages directory
 include:
