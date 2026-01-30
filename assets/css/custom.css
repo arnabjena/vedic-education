@@ -1,0 +1,448 @@
+/* Vedic Wisdom for Families - Custom Styles */
+
+/* ============================================
+   VEDIC COLOR SCHEME
+   ============================================ */
+
+:root {
+  /* Primary Vedic Colors */
+  --vedic-saffron: #FF9933;
+  --vedic-white: #FFFFFF;
+  --vedic-green: #138808;
+
+  /* Category Colors */
+  --color-vedic-literature: #FF9933;    /* Saffron */
+  --color-puranic-literature: #B22222;  /* Deep Red */
+  --color-philosophy: #FFD700;          /* Gold */
+  --color-vedic-sciences: #228B22;      /* Forest Green */
+  --color-rituals: #FF8C00;             /* Dark Orange */
+  --color-values: #4169E1;              /* Royal Blue */
+  --color-stories: #9370DB;             /* Medium Purple */
+  --color-modern: #008080;              /* Teal */
+
+  /* Text Colors */
+  --text-primary: #2c3e50;
+  --text-secondary: #555555;
+  --text-light: #7f8c8d;
+
+  /* Background Colors */
+  --bg-light: #fdfbf7;
+  --bg-accent: #fff9f0;
+  --bg-card: #ffffff;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+/* Header Customization */
+.site-header {
+  border-top: 3px solid var(--vedic-saffron);
+  border-bottom: 1px solid #e8e8e8;
+  background-color: var(--bg-card);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.site-title {
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  color: var(--vedic-saffron) !important;
+  letter-spacing: -0.5px;
+}
+
+.site-title:hover {
+  color: #e68a00 !important;
+  text-decoration: none;
+}
+
+/* Navigation */
+.site-nav .page-link {
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.site-nav .page-link:hover {
+  color: var(--vedic-saffron);
+  text-decoration: none;
+}
+
+/* ============================================
+   CONTENT STYLES
+   ============================================ */
+
+/* Main Content Area */
+.page-content {
+  padding: var(--spacing-lg) 0;
+}
+
+.post-content,
+.page-content {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+  color: var(--vedic-saffron);
+  border-bottom: 2px solid var(--vedic-saffron);
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  color: #d4771f;
+  margin-top: var(--spacing-xl);
+}
+
+h3 {
+  color: var(--text-primary);
+  font-size: 1.4rem;
+}
+
+/* Links */
+a {
+  color: var(--color-values);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--vedic-saffron);
+  text-decoration: underline;
+}
+
+/* ============================================
+   CATEGORY BADGES
+   ============================================ */
+
+.category-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.category-vedic-literature {
+  background-color: var(--color-vedic-literature);
+}
+
+.category-puranas {
+  background-color: var(--color-puranic-literature);
+}
+
+.category-philosophy {
+  background-color: var(--color-philosophy);
+  color: var(--text-primary) !important;
+}
+
+.category-vedic-sciences {
+  background-color: var(--color-vedic-sciences);
+}
+
+.category-rituals {
+  background-color: var(--color-rituals);
+}
+
+.category-values {
+  background-color: var(--color-values);
+}
+
+.category-stories {
+  background-color: var(--color-stories);
+}
+
+.category-modern-applications {
+  background-color: var(--color-modern);
+}
+
+/* ============================================
+   POST/ARTICLE STYLES
+   ============================================ */
+
+.post-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.post-title {
+  color: var(--vedic-saffron);
+  margin-bottom: var(--spacing-sm);
+}
+
+.post-meta {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.post-content {
+  margin-top: var(--spacing-lg);
+}
+
+/* Post Lists */
+.post-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.post-list > li {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-list > li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 153, 51, 0.15);
+}
+
+.post-list h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
+}
+
+/* ============================================
+   SPECIAL ELEMENTS
+   ============================================ */
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--vedic-saffron);
+  background-color: var(--bg-accent);
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+/* Code Blocks */
+code {
+  background-color: #f4f4f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre code {
+  display: block;
+  padding: var(--spacing-sm);
+  overflow-x: auto;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  border-radius: 5px;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: var(--spacing-md) 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: var(--vedic-saffron);
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: var(--bg-accent);
+}
+
+/* ============================================
+   CUSTOM COMPONENTS
+   ============================================ */
+
+/* Featured Content Box */
+.featured-box {
+  background: linear-gradient(135deg, #fff9f0 0%, #ffffff 100%);
+  border-left: 4px solid var(--vedic-saffron);
+  padding: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.featured-box h3 {
+  color: var(--vedic-saffron);
+  margin-top: 0;
+}
+
+/* Info Box */
+.info-box {
+  background-color: #e3f2fd;
+  border-left: 4px solid var(--color-values);
+  padding: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  border-radius: 5px;
+}
+
+/* Warning Box */
+.note-box {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  border-radius: 5px;
+}
+
+/* Success Box */
+.success-box {
+  background-color: #d4edda;
+  border-left: 4px solid var(--color-vedic-sciences);
+  padding: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  border-radius: 5px;
+}
+
+/* ============================================
+   CATEGORY CARDS (for homepage)
+   ============================================ */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+}
+
+.category-card {
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  padding: var(--spacing-md);
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-top: 4px solid;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.category-card h3 {
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+  font-size: 1.3rem;
+}
+
+.category-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.category-card.vedic-literature { border-top-color: var(--color-vedic-literature); }
+.category-card.puranas { border-top-color: var(--color-puranic-literature); }
+.category-card.philosophy { border-top-color: var(--color-philosophy); }
+.category-card.vedic-sciences { border-top-color: var(--color-vedic-sciences); }
+.category-card.rituals { border-top-color: var(--color-rituals); }
+.category-card.values { border-top-color: var(--color-values); }
+.category-card.stories { border-top-color: var(--color-stories); }
+.category-card.modern { border-top-color: var(--color-modern); }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.site-footer {
+  border-top: 2px solid var(--vedic-saffron);
+  background-color: var(--bg-card);
+  padding: var(--spacing-lg) 0;
+}
+
+.footer-heading {
+  color: var(--vedic-saffron);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media screen and (max-width: 600px) {
+  .site-title {
+    font-size: 1.4rem !important;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--text-light);
+}
+
+.mt-lg {
+  margin-top: var(--spacing-lg);
+}
+
+.mb-lg {
+  margin-bottom: var(--spacing-lg);
+}
+
+.vedic-divider {
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--vedic-saffron), transparent);
+  border: none;
+  margin: var(--spacing-lg) 0;
+}
+
+/* Sanskrit OM Symbol */
+.om-symbol {
+  color: var(--vedic-saffron);
+  font-size: 2rem;
+  text-align: center;
+  margin: var(--spacing-md) 0;
+}
