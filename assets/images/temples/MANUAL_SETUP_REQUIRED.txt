@@ -1,0 +1,23 @@
+⚠️ MANUAL IMAGE SETUP REQUIRED
+
+The temple images need to be manually verified and added.
+
+ACTION NEEDED:
+1. Read: assets/images/temples/HOW_TO_ADD_IMAGES.md
+2. Download verified Krishna, Rama, and Shiva images
+3. Add 8 images to this folder with these exact names:
+   - krishna-1.jpg
+   - krishna-2.jpg
+   - krishna-3.jpg
+   - rama-1.jpg
+   - rama-2.jpg
+   - shiva-1.jpg
+   - shiva-2.jpg
+   - shiva-3.jpg
+
+TEMPORARY SOLUTION:
+For now, I'll create a simple solid color placeholder so the site doesn't break.
+The site will still work, but show placeholder colors instead of images.
+
+Once you add the real images with the correct filenames above,
+they will automatically appear on the website.

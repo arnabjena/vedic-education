@@ -6,8 +6,7 @@ title: Welcome to Vedic Wisdom for Families
 <style>
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(rgba(102, 126, 234, 0.85), rgba(118, 75, 162, 0.85)),
-              url('{{ "/assets/images/temples/rama-temple-1.jpg" | relative_url }}') center/cover;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   padding: 5rem 2rem;
   text-align: center;
@@ -573,13 +572,16 @@ title: Welcome to Vedic Wisdom for Families
   </div>
 </div>
 
-<!-- Image Banner - Krishna, Rama, and Shiva Temples from Pexels (Free) -->
+<!-- Image Banner - Krishna, Rama, and Shiva Deity Images -->
+<!-- Temporarily hidden until verified images are added -->
+<!--
 <div class="image-banner">
-  <img src="{{ '/assets/images/temples/krishna-iskcon-temple.jpg' | relative_url }}" alt="ISKCON Krishna Temple" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="{{ '/assets/images/temples/rama-temple-2.jpg' | relative_url }}" alt="Rama Temple" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="{{ '/assets/images/temples/shiva-temple-1.jpg' | relative_url }}" alt="Shiva Temple" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="{{ '/assets/images/temples/krishna-dwarka-temple.jpg' | relative_url }}" alt="Krishna Dwarka Temple" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="{{ '/assets/images/temples/krishna-1.jpg' | relative_url }}" alt="Lord Krishna" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="{{ '/assets/images/temples/rama-1.jpg' | relative_url }}" alt="Lord Rama" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="{{ '/assets/images/temples/shiva-1.jpg' | relative_url }}" alt="Lord Shiva" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="{{ '/assets/images/temples/krishna-2.jpg' | relative_url }}" alt="Krishna Temple" style="filter: brightness(0.75) saturate(1.2);">
 </div>
+-->
 
 <!-- Stats Section -->
 <div class="stats-section">
@@ -722,7 +724,7 @@ title: Welcome to Vedic Wisdom for Families
 
   <div class="featured-grid">
     <a href="{{ '/vedic-sciences/vedic-astronomy-and-mathematics/' | relative_url }}" class="featured-card">
-      <img src="{{ '/assets/images/temples/shiva-temple-2.jpg' | relative_url }}" alt="Shiva Temple" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
+      <div class="featured-card-image" style="background: linear-gradient(135deg, #43e97b, #38f9d7); height: 250px; display: flex; align-items: center; justify-content: center; font-size: 5rem;">🔬</div>
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">Science</span>
         <h3>Vedic Astronomy & Math</h3>
@@ -731,7 +733,7 @@ title: Welcome to Vedic Wisdom for Families
     </a>
 
     <a href="{{ '/stories/rama-story-part1/' | relative_url }}" class="featured-card">
-      <img src="{{ '/assets/images/temples/rama-temple-1.jpg' | relative_url }}" alt="Rama Temple" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
+      <div class="featured-card-image" style="background: linear-gradient(135deg, #ff9a9e, #fecfef); height: 250px; display: flex; align-items: center; justify-content: center; font-size: 5rem;">🏹</div>
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #ff9a9e, #fecfef);">Stories</span>
         <h3>The Story of Rama</h3>
@@ -740,7 +742,7 @@ title: Welcome to Vedic Wisdom for Families
     </a>
 
     <a href="{{ '/philosophy/introduction-to-bhagavad-gita/' | relative_url }}" class="featured-card">
-      <img src="{{ '/assets/images/temples/krishna-vrindavan-temple.jpg' | relative_url }}" alt="Krishna Vrindavan Temple" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
+      <div class="featured-card-image" style="background: linear-gradient(135deg, #4facfe, #00f2fe); height: 250px; display: flex; align-items: center; justify-content: center; font-size: 5rem;">📖</div>
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">Philosophy</span>
         <h3>Bhagavad Gita</h3>
@@ -749,7 +751,7 @@ title: Welcome to Vedic Wisdom for Families
     </a>
 
     <a href="{{ '/history/hindu-civilization-through-ages/' | relative_url }}" class="featured-card">
-      <img src="{{ '/assets/images/temples/shiva-kashi-temple.jpg' | relative_url }}" alt="Shiva Kashi Temple" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
+      <div class="featured-card-image" style="background: linear-gradient(135deg, #f857a6, #ff5858); height: 250px; display: flex; align-items: center; justify-content: center; font-size: 5rem;">🏛️</div>
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #f857a6, #ff5858);">History</span>
         <h3>Hindu Civilization</h3>
@@ -758,7 +760,7 @@ title: Welcome to Vedic Wisdom for Families
     </a>
 
     <a href="{{ '/stories/krishna-childhood-stories/' | relative_url }}" class="featured-card">
-      <img src="{{ '/assets/images/temples/krishna-iskcon-temple.jpg' | relative_url }}" alt="Krishna Temple" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
+      <div class="featured-card-image" style="background: linear-gradient(135deg, #667eea, #764ba2); height: 250px; display: flex; align-items: center; justify-content: center; font-size: 5rem;">🎶</div>
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #ff9a9e, #fecfef);">Stories</span>
         <h3>Krishna's Adventures</h3>
@@ -767,7 +769,7 @@ title: Welcome to Vedic Wisdom for Families
     </a>
 
     <a href="{{ '/stories/mahabharata-introduction/' | relative_url }}" class="featured-card">
-      <img src="{{ '/assets/images/temples/krishna-dwarka-temple.jpg' | relative_url }}" alt="Krishna Dwarka Temple" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
+      <div class="featured-card-image" style="background: linear-gradient(135deg, #30cfd0, #330867); height: 250px; display: flex; align-items: center; justify-content: center; font-size: 5rem;">⚔️</div>
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #ff9a9e, #fecfef);">Stories</span>
         <h3>Mahabharata Epic</h3>
