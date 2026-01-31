@@ -57,6 +57,51 @@
     currentButton = null;
   }
 
+  function selectBestVoice() {
+    const voices = synth.getVoices();
+
+    // Voice preference order (best to acceptable)
+    const preferences = [
+      // 1. Indian English voices (most natural for Indian content)
+      v => v.lang === 'en-IN' && v.name.includes('Google'),
+      v => v.lang === 'en-IN',
+
+      // 2. High-quality Google voices
+      v => v.name.includes('Google') && v.name.includes('UK'),
+      v => v.name.includes('Google') && v.name.includes('US'),
+
+      // 3. Natural-sounding voices (female voices often sound warmer)
+      v => v.name.toLowerCase().includes('female'),
+      v => v.name.toLowerCase().includes('samantha'),
+      v => v.name.toLowerCase().includes('karen'),
+      v => v.name.toLowerCase().includes('veena'),
+      v => v.name.toLowerCase().includes('rishi'),
+
+      // 4. Any UK/Australian English (closer to Indian accent)
+      v => v.lang === 'en-GB',
+      v => v.lang === 'en-AU',
+
+      // 5. Any Google voice
+      v => v.name.includes('Google'),
+
+      // 6. Any English voice
+      v => v.lang.startsWith('en-')
+    ];
+
+    // Try each preference in order
+    for (const preference of preferences) {
+      const voice = voices.find(preference);
+      if (voice) {
+        console.log('Selected voice:', voice.name, voice.lang);
+        return voice;
+      }
+    }
+
+    // Fallback to first available voice
+    console.log('Using default voice:', voices[0]?.name);
+    return voices[0];
+  }
+
   function playSection(heading, button) {
     // Stop any currently playing audio
     stopCurrentAudio();
@@ -73,14 +118,14 @@
     currentUtterance = new SpeechSynthesisUtterance(text);
     currentButton = button;
 
-    // Configure voice
-    const voices = synth.getVoices();
-    const englishVoice = voices.find(v => v.lang.startsWith('en-')) || voices[0];
-    if (englishVoice) {
-      currentUtterance.voice = englishVoice;
+    // Configure voice (select best Indian/natural voice)
+    const bestVoice = selectBestVoice();
+    if (bestVoice) {
+      currentUtterance.voice = bestVoice;
     }
 
-    currentUtterance.rate = 1.0;
+    // Slightly slower rate sounds more natural
+    currentUtterance.rate = 0.9;
     currentUtterance.pitch = 1.0;
     currentUtterance.volume = 1.0;
 

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Tester - Vedic Wisdom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #FF9933;
+            text-align: center;
+        }
+        .info {
+            background: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .test-text {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+        .voice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .voice-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .voice-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 153, 51, 0.3);
+            border-color: #FF9933;
+        }
+        .voice-card.playing {
+            background: #fff9f0;
+            border-color: #FF9933;
+        }
+        .voice-card.recommended {
+            border: 2px solid #4CAF50;
+            background: #f1f8e9;
+        }
+        .voice-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .voice-lang {
+            color: #666;
+            font-size: 14px;
+        }
+        .voice-quality {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .voice-quality.indian {
+            background: #FF9933;
+        }
+        .voice-quality.google {
+            background: #2196F3;
+        }
+        button {
+            background: #FF9933;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        button:hover {
+            background: #e68a00;
+        }
+        .stop-btn {
+            background: #dc3545;
+        }
+        .stop-btn:hover {
+            background: #c82333;
+        }
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .stats {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .stats span {
+            display: inline-block;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔊 Voice Tester for Vedic Wisdom</h1>
+
+    <div class="info">
+        <strong>🎯 Purpose:</strong> This tool helps you test all available voices on your device and find the best one for Indian English content.
+        <br><br>
+        <strong>✨ Recommended:</strong> Look for voices marked with <span style="background:#FF9933;color:white;padding:2px 8px;border-radius:3px;font-size:12px;">INDIAN</span> or <span style="background:#2196F3;color:white;padding:2px 8px;border-radius:3px;font-size:12px;">GOOGLE</span>
+    </div>
+
+    <div class="test-text">
+        <h3>Test Text (Edit to test with your content):</h3>
+        <textarea id="testText">
+Namaste! Welcome to Vedic Wisdom for Families. The Bhagavad Gita teaches us about dharma, karma, and moksha. Lord Krishna explained these profound concepts to Arjuna on the battlefield of Kurukshetra. The ancient wisdom of the Vedas continues to guide millions of people around the world.
+        </textarea>
+    </div>
+
+    <div class="controls">
+        <button onclick="testAllVoices()">🎵 Test All Voices (One by One)</button>
+        <button onclick="stopSpeaking()" class="stop-btn">⏹️ Stop</button>
+    </div>
+
+    <div class="stats" id="stats">
+        <span>Total Voices: <span id="totalVoices">0</span></span>
+        <span>Indian Voices: <span id="indianVoices">0</span></span>
+        <span>Google Voices: <span id="googleVoices">0</span></span>
+    </div>
+
+    <h2>Available Voices (Click to Test):</h2>
+    <div class="voice-grid" id="voiceGrid">
+        Loading voices...
+    </div>
+
+    <script>
+        const synth = window.speechSynthesis;
+        let currentUtterance = null;
+        let currentCard = null;
+
+        function loadVoices() {
+            const voices = synth.getVoices();
+
+            if (voices.length === 0) {
+                document.getElementById('voiceGrid').innerHTML = '<p>No voices found. Please wait...</p>';
+                return;
+            }
+
+            // Count voice types
+            const indianCount = voices.filter(v => v.lang === 'en-IN').length;
+            const googleCount = voices.filter(v => v.name.includes('Google')).length;
+
+            document.getElementById('totalVoices').textContent = voices.length;
+            document.getElementById('indianVoices').textContent = indianCount;
+            document.getElementById('googleVoices').textContent = googleCount;
+
+            // Sort voices: Indian first, then Google, then others
+            const sortedVoices = voices.sort((a, b) => {
+                if (a.lang === 'en-IN' && b.lang !== 'en-IN') return -1;
+                if (a.lang !== 'en-IN' && b.lang === 'en-IN') return 1;
+                if (a.name.includes('Google') && !b.name.includes('Google')) return -1;
+                if (!a.name.includes('Google') && b.name.includes('Google')) return 1;
+                return a.name.localeCompare(b.name);
+            });
+
+            const grid = document.getElementById('voiceGrid');
+            grid.innerHTML = '';
+
+            sortedVoices.forEach((voice, index) => {
+                const card = document.createElement('div');
+                card.className = 'voice-card';
+                card.id = 'voice-' + index;
+
+                // Mark recommended voices
+                if (voice.lang === 'en-IN' || (voice.name.includes('Google') && voice.lang.startsWith('en-'))) {
+                    card.classList.add('recommended');
+                }
+
+                let badges = '';
+                if (voice.lang === 'en-IN') {
+                    badges += '<span class="voice-quality indian">INDIAN ENGLISH</span> ';
+                }
+                if (voice.name.includes('Google')) {
+                    badges += '<span class="voice-quality google">GOOGLE</span> ';
+                }
+                if (voice.name.toLowerCase().includes('female') || voice.name.toLowerCase().includes('samantha') || voice.name.toLowerCase().includes('veena')) {
+                    badges += '<span class="voice-quality">FEMALE</span>';
+                }
+
+                card.innerHTML = `
+                    <div class="voice-name">${voice.name}</div>
+                    <div class="voice-lang">${voice.lang}</div>
+                    ${badges}
+                `;
+
+                card.onclick = () => testVoice(voice, card);
+
+                grid.appendChild(card);
+            });
+        }
+
+        function testVoice(voice, card) {
+            stopSpeaking();
+
+            const text = document.getElementById('testText').value;
+            currentUtterance = new SpeechSynthesisUtterance(text);
+            currentUtterance.voice = voice;
+            currentUtterance.rate = 0.9;
+            currentUtterance.pitch = 1.0;
+            currentUtterance.volume = 1.0;
+
+            currentCard = card;
+            card.classList.add('playing');
+
+            currentUtterance.onend = () => {
+                card.classList.remove('playing');
+                currentCard = null;
+            };
+
+            synth.speak(currentUtterance);
+
+            console.log('Testing voice:', voice.name, voice.lang);
+        }
+
+        function stopSpeaking() {
+            if (synth.speaking) {
+                synth.cancel();
+            }
+            if (currentCard) {
+                currentCard.classList.remove('playing');
+                currentCard = null;
+            }
+        }
+
+        async function testAllVoices() {
+            const voices = synth.getVoices();
+            const text = document.getElementById('testText').value;
+
+            for (let i = 0; i < voices.length; i++) {
+                const voice = voices[i];
+                const card = document.getElementById('voice-' + i);
+
+                // Wait for previous to finish
+                await new Promise(resolve => {
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    utterance.voice = voice;
+                    utterance.rate = 0.9;
+
+                    card.classList.add('playing');
+
+                    utterance.onend = () => {
+                        card.classList.remove('playing');
+                        setTimeout(resolve, 500); // Pause between voices
+                    };
+
+                    synth.speak(utterance);
+                });
+            }
+        }
+
+        // Load voices
+        loadVoices();
+
+        // Some browsers load voices asynchronously
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = loadVoices;
+        }
+
+        // Reload voices after a delay (for some browsers)
+        setTimeout(loadVoices, 1000);
+    </script>
+</body>
+</html>
