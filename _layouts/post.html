@@ -25,41 +25,9 @@ layout: default
     <p class="post-meta"><em>{{ page.description }}</em></p>
     {%- endif -%}
 
-    <!-- Audio Player / Text-to-Speech Controls -->
-    <div class="audio-player-container">
-      <div class="audio-player-header">
-        <span class="audio-player-icon">🔊</span>
-        <h3 class="audio-player-title">Listen to This Article</h3>
-      </div>
-      <p class="audio-player-description">
-        Can't read right now? Let our audio reader read this article aloud for you! Perfect for multitasking, accessibility, or when your eyes need a rest.
-      </p>
-      <div class="listen-controls">
-        <button id="tts-play" class="audio-button btn-play">
-          <span>▶️</span>
-          <span>Play</span>
-        </button>
-        <button id="tts-pause" class="audio-button btn-pause" style="display: none;">
-          <span>⏸️</span>
-          <span>Pause</span>
-        </button>
-        <button id="tts-stop" class="audio-button btn-stop" disabled>
-          <span>⏹️</span>
-          <span>Stop</span>
-        </button>
-        <div class="speed-control">
-          <label for="tts-speed">Speed:</label>
-          <select id="tts-speed">
-            <option value="0.75">0.75x (Slower)</option>
-            <option value="1.0" selected>1.0x (Normal)</option>
-            <option value="1.25">1.25x (Faster)</option>
-            <option value="1.5">1.5x (Fast)</option>
-          </select>
-        </div>
-      </div>
-      <div class="audio-note">
-        <strong>Note:</strong> This feature uses your browser's built-in text-to-speech. Works best on Chrome, Safari, Edge, and Firefox. The audio will read the entire article content.
-      </div>
+    <!-- Section Audio: Play buttons appear next to each section heading -->
+    <div class="audio-info-note" style="background:#e3f2fd;border-left:4px solid #2196F3;padding:12px 15px;border-radius:6px;margin:15px 0;font-size:0.9rem;">
+      <strong>🔊 Listen to Sections:</strong> Click the ▶️ button next to any section heading to hear it read aloud!
     </div>
 
   </header>
@@ -82,5 +50,5 @@ layout: default
 <!-- Load Table of Contents JavaScript -->
 <script src="{{ '/assets/js/table-of-contents.js' | relative_url }}"></script>
 
-<!-- Load Text-to-Speech JavaScript -->
-<script src="{{ '/assets/js/text-to-speech.js' | relative_url }}"></script>
+<!-- Load Section-Specific Audio JavaScript -->
+<script src="{{ '/assets/js/section-audio.js' | relative_url }}"></script>

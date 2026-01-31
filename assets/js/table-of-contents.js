@@ -63,14 +63,28 @@
       link.className = 'toc-link toc-level-' + heading.tagName.toLowerCase();
 
       let text = heading.textContent.trim();
+
+      // Remove common prefixes
       text = text.replace(/^Part \d+:\s*/i, '');
       text = text.replace(/^\d+\.\s*/, '');
+      text = text.replace(/^Chapter \d+:\s*/i, '');
+      text = text.replace(/^Section \d+:\s*/i, '');
 
-      if (text.length > 50) {
-        text = text.substring(0, 47) + '...';
-      }
+      // Extract only the first 1-3 meaningful words
+      const words = text.split(/[\s\-:,]+/);
+      const meaningfulWords = words.filter(w =>
+        w.length > 2 &&
+        !['the', 'and', 'for', 'with', 'from', 'into', 'this', 'that', 'these', 'those'].includes(w.toLowerCase())
+      );
+
+      // Use first 2-3 words max
+      const shortText = meaningfulWords.slice(0, 3).join(' ');
+
+      // Fallback to first 20 chars if no meaningful words found
+      text = shortText || text.substring(0, 20);
 
       link.textContent = text;
+      link.title = heading.textContent.trim(); // Full text on hover
 
       link.addEventListener('click', function(e) {
         e.preventDefault();

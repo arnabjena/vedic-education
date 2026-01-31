@@ -1,0 +1,187 @@
+/**
+ * Section-Specific Audio Player
+ * Adds play button next to each section heading
+ * Reads only that specific section
+ */
+
+(function() {
+  'use strict';
+
+  let currentUtterance = null;
+  let currentButton = null;
+  const synth = window.speechSynthesis;
+
+  // Check if speech synthesis is supported
+  if (!('speechSynthesis' in window)) {
+    console.warn('Text-to-Speech not supported');
+    return;
+  }
+
+  function extractSectionContent(heading) {
+    const content = [];
+    let currentElement = heading.nextElementSibling;
+
+    // Collect all elements until the next heading of same or higher level
+    while (currentElement) {
+      const tagName = currentElement.tagName;
+
+      // Stop at next h2 or h1
+      if (tagName === 'H1' || tagName === 'H2') {
+        break;
+      }
+
+      // Get text from this element
+      const text = currentElement.textContent || currentElement.innerText;
+      if (text && text.trim()) {
+        content.push(text.trim());
+      }
+
+      currentElement = currentElement.nextElementSibling;
+    }
+
+    return content.join(' ').replace(/\s+/g, ' ').trim();
+  }
+
+  function stopCurrentAudio() {
+    if (synth.speaking) {
+      synth.cancel();
+    }
+
+    if (currentButton) {
+      currentButton.textContent = '▶️';
+      currentButton.title = 'Play this section';
+      currentButton.classList.remove('playing');
+    }
+
+    currentUtterance = null;
+    currentButton = null;
+  }
+
+  function playSection(heading, button) {
+    // Stop any currently playing audio
+    stopCurrentAudio();
+
+    // Extract section content
+    const text = extractSectionContent(heading);
+
+    if (!text || text.length < 10) {
+      alert('This section is too short to read.');
+      return;
+    }
+
+    // Create utterance
+    currentUtterance = new SpeechSynthesisUtterance(text);
+    currentButton = button;
+
+    // Configure voice
+    const voices = synth.getVoices();
+    const englishVoice = voices.find(v => v.lang.startsWith('en-')) || voices[0];
+    if (englishVoice) {
+      currentUtterance.voice = englishVoice;
+    }
+
+    currentUtterance.rate = 1.0;
+    currentUtterance.pitch = 1.0;
+    currentUtterance.volume = 1.0;
+
+    // Update button when finished
+    currentUtterance.onend = function() {
+      if (currentButton) {
+        currentButton.textContent = '▶️';
+        currentButton.title = 'Play this section';
+        currentButton.classList.remove('playing');
+      }
+      currentUtterance = null;
+      currentButton = null;
+    };
+
+    // Start speaking
+    synth.speak(currentUtterance);
+
+    // Update button
+    button.textContent = '⏸️';
+    button.title = 'Stop';
+    button.classList.add('playing');
+  }
+
+  function addAudioButtons() {
+    const postContent = document.querySelector('.post-content');
+    if (!postContent) return;
+
+    const headings = postContent.querySelectorAll('h2');
+
+    headings.forEach(function(heading) {
+      // Create audio button
+      const button = document.createElement('button');
+      button.className = 'section-audio-btn';
+      button.textContent = '▶️';
+      button.title = 'Play this section';
+      button.setAttribute('aria-label', 'Play section audio');
+
+      // Add click handler
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        if (currentButton === button && synth.speaking) {
+          // Stop if clicking the same button
+          stopCurrentAudio();
+        } else {
+          // Play this section
+          playSection(heading, button);
+        }
+      });
+
+      // Create wrapper
+      const wrapper = document.createElement('span');
+      wrapper.className = 'section-audio-wrapper';
+      wrapper.appendChild(button);
+
+      // Insert button after heading text
+      heading.appendChild(document.createTextNode(' '));
+      heading.appendChild(wrapper);
+    });
+
+    // Add global stop button in case user wants to stop from anywhere
+    addGlobalStopButton();
+  }
+
+  function addGlobalStopButton() {
+    // Only add if there are sections with audio
+    if (document.querySelectorAll('.section-audio-btn').length === 0) {
+      return;
+    }
+
+    const stopBtn = document.createElement('button');
+    stopBtn.id = 'global-audio-stop';
+    stopBtn.className = 'global-audio-stop-btn';
+    stopBtn.textContent = '⏹️ Stop Audio';
+    stopBtn.title = 'Stop all audio';
+    stopBtn.style.cssText = 'position:fixed;bottom:80px;right:20px;background:#dc3545;color:white;border:none;padding:12px 20px;border-radius:50px;font-size:14px;font-weight:700;z-index:998;box-shadow:0 5px 15px rgba(0,0,0,0.3);cursor:pointer;display:none;';
+
+    stopBtn.addEventListener('click', function() {
+      stopCurrentAudio();
+      stopBtn.style.display = 'none';
+    });
+
+    document.body.appendChild(stopBtn);
+
+    // Show/hide stop button based on audio state
+    setInterval(function() {
+      if (synth.speaking) {
+        stopBtn.style.display = 'block';
+      } else {
+        stopBtn.style.display = 'none';
+      }
+    }, 100);
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(addAudioButtons, 200);
+    });
+  } else {
+    setTimeout(addAudioButtons, 200);
+  }
+
+})();
