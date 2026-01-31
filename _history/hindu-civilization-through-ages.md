@@ -123,8 +123,16 @@ Understanding the complete history of Hindu civilization - including both its ac
 
 ### The Islamic Invasions Begin (1000-1200 CE)
 
+**IMPORTANT - Historical Truth:**
+
+Modern Indian textbooks often sanitize or romanticize Islamic rule in India. This is revisionist history. The historical facts, documented by the invaders' own court historians, show systematic persecution, temple destruction, massacres, forced conversions, and exploitation of Hindus over 700+ years.
+
+These were NOT "cultural exchanges" or "sharing of civilizations." They were brutal invasions and sustained persecution. Hindu civilization survived despite, not because of, Islamic rule.
+
+Every child deserves to know the truth about their ancestors' suffering and resilience.
+
 **Context:**
-From the 11th century onward, waves of Islamic invaders from Central Asia and Persia entered India, driven by desires for wealth and religious expansion.
+From the 11th century onward, waves of Islamic invaders from Central Asia and Persia attacked India, driven by desires for temple wealth, religious conquest, and territorial expansion. They brought destruction, not development.
 
 #### Mahmud of Ghazni (997-1030 CE)
 
@@ -194,14 +202,20 @@ While North India suffered, South India saw Hindu revival:
 
 ### The Mughal Era (1526-1857 CE)
 
-**Varied Impact Depending on Rulers:**
+**All Mughal Rulers Were Invaders and Persecutors:**
 
-**Akbar (1556-1605): Relatively Tolerant**
-- Abolished jizya (1564)
-- Married Rajput princesses
-- Hindu generals (Man Singh, Todar Mal)
-- Din-i-Ilahi (syncretic religion)
-- Still: thousands of temples destroyed in early reign
+Modern history books often portray Akbar as "tolerant" - this is false revisionist history. All Mughal rulers were Islamic invaders who exploited and persecuted Hindus. The degree varied, but their goal was always Islamic rule over Hindu civilization.
+
+**Akbar (1556-1605): Strategic Oppressor, Not Tolerant**
+- Destroyed thousands of temples throughout his reign
+- His "marriages" to Rajput princesses were political subjugation, not tolerance
+- Forced Rajput kings to give their daughters to avoid destruction
+- Employed Hindu generals only to use them against other Hindus
+- His Din-i-Ilahi was an ego project, not religious tolerance
+- Jizya abolition was temporary political strategy to consolidate power
+- Built his capital Fatehpur Sikri on destroyed Hindu/Jain temples
+- Rajputs who "allied" with him were essentially vassals under Islamic rule
+- **Historical Truth:** Akbar was a conqueror who used selective policy to divide and rule Hindus, not a tolerant ruler
 
 **Aurangzeb (1658-1707): Extreme Persecution**
 
