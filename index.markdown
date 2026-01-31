@@ -7,7 +7,7 @@ title: Welcome to Vedic Wisdom for Families
 /* Hero Section */
 .hero-section {
   background: linear-gradient(rgba(102, 126, 234, 0.85), rgba(118, 75, 162, 0.85)),
-              url('{{ "/assets/images/temples/south-indian-temple.jpg" | relative_url }}') center/cover;
+              url('{{ "/assets/images/temples/rama-temple-1.jpg" | relative_url }}') center/cover;
   color: white;
   padding: 5rem 2rem;
   text-align: center;
@@ -573,12 +573,12 @@ title: Welcome to Vedic Wisdom for Families
   </div>
 </div>
 
-<!-- Image Banner - Hindu Temples from Pexels (Free) -->
+<!-- Image Banner - Krishna, Rama, and Shiva Temples from Pexels (Free) -->
 <div class="image-banner">
-  <img src="{{ '/assets/images/temples/colorful-gopuram.jpg' | relative_url }}" alt="Colorful Hindu Temple Gopuram" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="{{ '/assets/images/temples/temple-architecture.jpg' | relative_url }}" alt="Hindu Temple Architecture" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="{{ '/assets/images/temples/ancient-temple.jpg' | relative_url }}" alt="Ancient Hindu Temple" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="{{ '/assets/images/temples/temple-sunset.jpg' | relative_url }}" alt="Hindu Temple at Sunset" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="{{ '/assets/images/temples/krishna-iskcon-temple.jpg' | relative_url }}" alt="ISKCON Krishna Temple" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="{{ '/assets/images/temples/rama-temple-2.jpg' | relative_url }}" alt="Rama Temple" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="{{ '/assets/images/temples/shiva-temple-1.jpg' | relative_url }}" alt="Shiva Temple" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="{{ '/assets/images/temples/krishna-dwarka-temple.jpg' | relative_url }}" alt="Krishna Dwarka Temple" style="filter: brightness(0.75) saturate(1.2);">
 </div>
 
 <!-- Stats Section -->
@@ -721,8 +721,8 @@ title: Welcome to Vedic Wisdom for Families
   </div>
 
   <div class="featured-grid">
-    <a href="{{ site.baseurl }}/vedic-sciences/vedic-astronomy-and-mathematics/" class="featured-card">
-      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&h=500&fit=crop" alt="Ancient Astronomy" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
+    <a href="{{ '/vedic-sciences/vedic-astronomy-and-mathematics/' | relative_url }}" class="featured-card">
+      <img src="{{ '/assets/images/temples/shiva-temple-2.jpg' | relative_url }}" alt="Shiva Temple" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">Science</span>
         <h3>Vedic Astronomy & Math</h3>
@@ -730,8 +730,8 @@ title: Welcome to Vedic Wisdom for Families
       </div>
     </a>
 
-    <a href="{{ site.baseurl }}/stories/rama-story-part1/" class="featured-card">
-      <img src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=800&h=500&fit=crop" alt="Ramayana" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
+    <a href="{{ '/stories/rama-story-part1/' | relative_url }}" class="featured-card">
+      <img src="{{ '/assets/images/temples/rama-temple-1.jpg' | relative_url }}" alt="Rama Temple" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #ff9a9e, #fecfef);">Stories</span>
         <h3>The Story of Rama</h3>
@@ -739,8 +739,8 @@ title: Welcome to Vedic Wisdom for Families
       </div>
     </a>
 
-    <a href="{{ site.baseurl }}/philosophy/introduction-to-bhagavad-gita/" class="featured-card">
-      <img src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=800&h=500&fit=crop" alt="Bhagavad Gita" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
+    <a href="{{ '/philosophy/introduction-to-bhagavad-gita/' | relative_url }}" class="featured-card">
+      <img src="{{ '/assets/images/temples/krishna-vrindavan-temple.jpg' | relative_url }}" alt="Krishna Vrindavan Temple" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">Philosophy</span>
         <h3>Bhagavad Gita</h3>
@@ -748,8 +748,8 @@ title: Welcome to Vedic Wisdom for Families
       </div>
     </a>
 
-    <a href="{{ site.baseurl }}/history/hindu-civilization-through-ages/" class="featured-card">
-      <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=800&h=500&fit=crop" alt="Hindu History" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
+    <a href="{{ '/history/hindu-civilization-through-ages/' | relative_url }}" class="featured-card">
+      <img src="{{ '/assets/images/temples/shiva-kashi-temple.jpg' | relative_url }}" alt="Shiva Kashi Temple" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #f857a6, #ff5858);">History</span>
         <h3>Hindu Civilization</h3>
@@ -757,8 +757,8 @@ title: Welcome to Vedic Wisdom for Families
       </div>
     </a>
 
-    <a href="{{ site.baseurl }}/stories/krishna-childhood-stories/" class="featured-card">
-      <img src="https://images.unsplash.com/photo-1604608672516-f1b9b1cfce7b?w=800&h=500&fit=crop" alt="Krishna" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
+    <a href="{{ '/stories/krishna-childhood-stories/' | relative_url }}" class="featured-card">
+      <img src="{{ '/assets/images/temples/krishna-iskcon-temple.jpg' | relative_url }}" alt="Krishna Temple" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #ff9a9e, #fecfef);">Stories</span>
         <h3>Krishna's Adventures</h3>
@@ -766,8 +766,8 @@ title: Welcome to Vedic Wisdom for Families
       </div>
     </a>
 
-    <a href="{{ site.baseurl }}/stories/mahabharata-introduction/" class="featured-card">
-      <img src="https://images.unsplash.com/photo-1609136176146-eb5d4cf4293d?w=800&h=500&fit=crop" alt="Mahabharata" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
+    <a href="{{ '/stories/mahabharata-introduction/' | relative_url }}" class="featured-card">
+      <img src="{{ '/assets/images/temples/krishna-dwarka-temple.jpg' | relative_url }}" alt="Krishna Dwarka Temple" class="featured-card-image" style="filter: brightness(0.8) saturate(1.3);">
       <div class="featured-card-content">
         <span class="featured-card-badge" style="background: linear-gradient(135deg, #ff9a9e, #fecfef);">Stories</span>
         <h3>Mahabharata Epic</h3>
