@@ -559,12 +559,13 @@ title: Welcome to Vedic Wisdom for Families
 <div class="hero-section">
   <div class="hero-content">
     <div class="om-symbol">ॐ</div>
-    <h1>Discover Vedic Wisdom<br>for Your Family</h1>
-    <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.5rem;">Version 2.0 - Updated Design</div>
-    <p>Explore 3000+ years of Hindu knowledge, ancient sciences, epic stories, and timeless philosophy. From the Vedas to modern applications - comprehensive education rooted in authenticity.</p>
-    <div>
-      <a href="{{ '/vedic-literature/' | relative_url }}" class="hero-cta">Start Exploring</a>
-      <a href="{{ '/quizzes/' | relative_url }}" class="hero-cta secondary">Take a Quiz</a>
+    <h1>Vedic Wisdom for Families</h1>
+    <p>Explore 3000+ years of Hindu knowledge, ancient sciences, epic stories, and timeless philosophy</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+      <a href="{{ '/vedic-literature/' | relative_url }}" class="hero-cta">Vedic Literature</a>
+      <a href="{{ '/stories/' | relative_url }}" class="hero-cta">Epic Stories</a>
+      <a href="{{ '/philosophy/' | relative_url }}" class="hero-cta">Philosophy</a>
+      <a href="{{ '/quizzes/' | relative_url }}" class="hero-cta secondary">Quizzes</a>
     </div>
   </div>
 </div>
@@ -573,8 +574,8 @@ title: Welcome to Vedic Wisdom for Families
 <div class="image-banner">
   <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400&h=300&fit=crop" alt="Ancient Indian Temple" style="filter: brightness(0.75) saturate(1.2);">
   <img src="https://images.unsplash.com/photo-1524230659092-07f99a75c013?w=400&h=300&fit=crop" alt="Hindu Deity" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=400&h=300&fit=crop" alt="Yoga and Meditation" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="https://images.unsplash.com/photo-1514222709107-a180c68d72b4?w=400&h=300&fit=crop" alt="Ancient Manuscripts" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=400&h=300&fit=crop" alt="Hindu Temple Architecture" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=400&h=300&fit=crop" alt="Temple Deity Statue" style="filter: brightness(0.75) saturate(1.2);">
 </div>
 
 <!-- Stats Section -->
@@ -657,13 +658,9 @@ title: Welcome to Vedic Wisdom for Families
 <!-- Quiz Banner -->
 <div class="quiz-banner">
   <h2>🎯 Test Your Knowledge!</h2>
-  <p>Challenge yourself with interactive quizzes covering stories, philosophy, science, and values</p>
+  <p>Challenge yourself with 5 interactive quizzes covering Ramayana, Krishna, Vedic Science, Bhagavad Gita, and Dharma & Karma</p>
   <div class="quiz-links">
-    <a href="{{ '/quizzes/ramayana-quiz/' | relative_url }}" class="quiz-link">Ramayana</a>
-    <a href="{{ '/quizzes/krishna-quiz/' | relative_url }}" class="quiz-link">Krishna</a>
-    <a href="{{ '/quizzes/vedic-science-quiz/' | relative_url }}" class="quiz-link">Science</a>
-    <a href="{{ '/quizzes/bhagavad-gita-quiz/' | relative_url }}" class="quiz-link">Gita</a>
-    <a href="{{ '/quizzes/dharma-karma-quiz/' | relative_url }}" class="quiz-link">Dharma</a>
+    <a href="{{ '/quizzes/' | relative_url }}" class="quiz-link" style="font-size: 1.2rem; padding: 1.2rem 3rem;">Explore All Quizzes →</a>
   </div>
 </div>
 
