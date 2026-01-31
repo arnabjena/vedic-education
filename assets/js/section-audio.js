@@ -60,6 +60,15 @@
   function selectBestVoice() {
     const voices = synth.getVoices();
 
+    // Check if user manually selected a voice
+    if (window.preferredVoiceURI) {
+      const userVoice = voices.find(v => v.voiceURI === window.preferredVoiceURI);
+      if (userVoice) {
+        console.log('Using user-selected voice:', userVoice.name, userVoice.lang);
+        return userVoice;
+      }
+    }
+
     // Voice preference order (best to acceptable)
     const preferences = [
       // 1. Indian English voices (most natural for Indian content)
@@ -92,7 +101,7 @@
     for (const preference of preferences) {
       const voice = voices.find(preference);
       if (voice) {
-        console.log('Selected voice:', voice.name, voice.lang);
+        console.log('Auto-selected voice:', voice.name, voice.lang);
         return voice;
       }
     }
@@ -102,17 +111,87 @@
     return voices[0];
   }
 
+  function fixPronunciation(text) {
+    // Pronunciation corrections for common Sanskrit/Hindi words
+    // Format: Incorrect → Phonetic spelling
+    const corrections = {
+      // Names
+      'Krishna': 'Krish-nuh',
+      'Rama': 'Raa-muh',
+      'Arjuna': 'Ar-joo-nuh',
+      'Vishnu': 'Vish-noo',
+      'Shiva': 'Shiv-uh',
+      'Hanuman': 'Hun-oo-maan',
+      'Ganesha': 'Gun-ay-shuh',
+
+      // Places
+      'Kurukshetra': 'Koo-rook-shay-truh',
+      'Ayodhya': 'Uh-yod-yuh',
+      'Vrindavan': 'Vrin-daa-vun',
+      'Dwarka': 'Dwaar-kuh',
+
+      // Concepts
+      'Dharma': 'Dhar-muh',
+      'Karma': 'Kar-muh',
+      'Moksha': 'Moke-shuh',
+      'Bhakti': 'Buck-tee',
+      'Yoga': 'Yo-guh',
+      'Veda': 'Vay-duh',
+      'Vedic': 'Vay-dick',
+
+      // Texts
+      'Bhagavad Gita': 'Bhug-uh-vud Gee-taa',
+      'Gita': 'Gee-taa',
+      'Ramayana': 'Raa-maa-yuh-nuh',
+      'Mahabharata': 'Muh-haa-baa-rut-uh',
+      'Upanishad': 'Oo-pun-ish-ud',
+      'Purana': 'Poo-raa-nuh',
+
+      // Greetings
+      'Namaste': 'Num-us-tay',
+      'Om': 'Ohm',
+      'ॐ': 'Ohm',
+
+      // Titles
+      'Swami': 'Swaa-mee',
+      'Guru': 'Goo-roo',
+      'Rishi': 'Rish-ee',
+      'Deva': 'Day-vuh',
+      'Devi': 'Day-vee'
+    };
+
+    // Only apply corrections if NOT using Indian voice
+    const currentVoice = selectBestVoice();
+    if (currentVoice && currentVoice.lang === 'en-IN') {
+      // Indian voices pronounce correctly, don't change
+      return text;
+    }
+
+    // Apply corrections for non-Indian voices
+    let correctedText = text;
+    for (const [original, phonetic] of Object.entries(corrections)) {
+      // Case-insensitive replacement
+      const regex = new RegExp('\\b' + original + '\\b', 'gi');
+      correctedText = correctedText.replace(regex, phonetic);
+    }
+
+    return correctedText;
+  }
+
   function playSection(heading, button) {
     // Stop any currently playing audio
     stopCurrentAudio();
 
     // Extract section content
-    const text = extractSectionContent(heading);
+    let text = extractSectionContent(heading);
 
     if (!text || text.length < 10) {
       alert('This section is too short to read.');
       return;
     }
+
+    // Fix pronunciation for non-Indian voices
+    text = fixPronunciation(text);
 
     // Create utterance
     currentUtterance = new SpeechSynthesisUtterance(text);
