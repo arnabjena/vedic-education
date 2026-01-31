@@ -71,6 +71,9 @@ collections:
   history:
     output: true
     permalink: /history/:path/
+  quizzes:
+    output: true
+    permalink: /quizzes/:path/
 
 # Include custom pages directory
 include:
