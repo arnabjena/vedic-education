@@ -9,9 +9,16 @@
   const synth = window.speechSynthesis;
   let selectedVoiceURI = localStorage.getItem('preferred-voice');
 
+  let selectorCreated = false; // Prevent duplicates
+
   function createVoiceSelector() {
     // Only run on article pages
     if (!document.querySelector('.post-content')) {
+      return;
+    }
+
+    // Prevent duplicate creation
+    if (selectorCreated) {
       return;
     }
 
@@ -22,6 +29,8 @@
         setTimeout(createVoiceSelector, 1000);
         return;
       }
+
+      selectorCreated = true; // Mark as created
 
       // Filter to only English voices
       const englishVoices = voices.filter(v => v.lang.startsWith('en-'));
@@ -35,10 +44,28 @@
         return a.name.localeCompare(b.name);
       });
 
+      // Create collapsible settings section
+      const settingsSection = document.createElement('details');
+      settingsSection.className = 'audio-settings-section';
+      settingsSection.style.cssText = 'background:#fff9f0;border:2px solid #FF9933;border-radius:12px;padding:0;margin:15px 0;';
+
+      const summary = document.createElement('summary');
+      summary.style.cssText = 'padding:12px 20px;cursor:pointer;font-weight:600;color:#333;font-size:15px;user-select:none;list-style:none;display:flex;align-items:center;gap:8px;';
+      summary.innerHTML = '⚙️ <span>Audio Settings</span> <span style="font-size:12px;color:#666;font-weight:normal;">(Click to select voice)</span>';
+      summary.style.outline = 'none';
+
+      // Add hover effect
+      summary.addEventListener('mouseenter', function() {
+        this.style.background = '#FFE0B2';
+      });
+      summary.addEventListener('mouseleave', function() {
+        this.style.background = 'transparent';
+      });
+
       // Create selector container
       const container = document.createElement('div');
       container.className = 'voice-selector-container';
-      container.style.cssText = 'background:#fff9f0;border:2px solid #FF9933;border-radius:12px;padding:15px 20px;margin:15px 0;display:flex;align-items:center;gap:15px;flex-wrap:wrap;';
+      container.style.cssText = 'padding:15px 20px;border-top:1px solid #FFE0B2;display:flex;align-items:center;gap:15px;flex-wrap:wrap;';
 
       // Label
       const label = document.createElement('label');
@@ -121,15 +148,18 @@
       container.appendChild(testBtn);
       container.appendChild(info);
 
+      settingsSection.appendChild(summary);
+      settingsSection.appendChild(container);
+
       // Insert after the audio info note
       const audioNote = document.querySelector('.audio-info-note');
       if (audioNote) {
-        audioNote.after(container);
+        audioNote.after(settingsSection);
       } else {
         // Insert at top of post content
         const postContent = document.querySelector('.post-content');
         if (postContent) {
-          postContent.insertBefore(container, postContent.firstChild);
+          postContent.insertBefore(settingsSection, postContent.firstChild);
         }
       }
 
@@ -233,9 +263,13 @@
     createVoiceSelector();
   }
 
-  // Reload on voices change
+  // Reload on voices change (only if not already created)
   if (speechSynthesis.onvoiceschanged !== undefined) {
-    speechSynthesis.onvoiceschanged = createVoiceSelector;
+    speechSynthesis.onvoiceschanged = function() {
+      if (!selectorCreated) {
+        createVoiceSelector();
+      }
+    };
   }
 
 })();
