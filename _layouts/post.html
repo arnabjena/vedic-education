@@ -1,0 +1,83 @@
+---
+layout: default
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      {%- if page.date -%}
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: "%b %-d, %Y" }}
+      </time>
+      {%- endif -%}
+      {%- if page.category -%}
+        <span class="category-badge category-{{ page.category }}">{{ page.category | replace: '_', ' ' | upcase }}</span>
+      {%- endif -%}
+      {%- if page.modified_date -%}
+        ~
+        <time class="dt-modified" datetime="{{ page.modified_date | date_to_xmlschema }}" itemprop="dateModified">
+          Updated {{ page.modified_date | date: "%b %-d, %Y" }}
+        </time>
+      {%- endif -%}
+    </p>
+    {%- if page.description -%}
+    <p class="post-meta"><em>{{ page.description }}</em></p>
+    {%- endif -%}
+
+    <!-- Audio Player / Text-to-Speech Controls -->
+    <div class="audio-player-container">
+      <div class="audio-player-header">
+        <span class="audio-player-icon">🔊</span>
+        <h3 class="audio-player-title">Listen to This Article</h3>
+      </div>
+      <p class="audio-player-description">
+        Can't read right now? Let our audio reader read this article aloud for you! Perfect for multitasking, accessibility, or when your eyes need a rest.
+      </p>
+      <div class="listen-controls">
+        <button id="tts-play" class="audio-button btn-play">
+          <span>▶️</span>
+          <span>Play</span>
+        </button>
+        <button id="tts-pause" class="audio-button btn-pause" style="display: none;">
+          <span>⏸️</span>
+          <span>Pause</span>
+        </button>
+        <button id="tts-stop" class="audio-button btn-stop" disabled>
+          <span>⏹️</span>
+          <span>Stop</span>
+        </button>
+        <div class="speed-control">
+          <label for="tts-speed">Speed:</label>
+          <select id="tts-speed">
+            <option value="0.75">0.75x (Slower)</option>
+            <option value="1.0" selected>1.0x (Normal)</option>
+            <option value="1.25">1.25x (Faster)</option>
+            <option value="1.5">1.5x (Fast)</option>
+          </select>
+        </div>
+      </div>
+      <div class="audio-note">
+        <strong>Note:</strong> This feature uses your browser's built-in text-to-speech. Works best on Chrome, Safari, Edge, and Firefox. The audio will read the entire article content.
+      </div>
+    </div>
+
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {%- if page.tags -%}
+  <div class="tags">
+    {%- for tag in page.tags -%}
+      <span class="tag">{{ tag }}</span>
+    {%- endfor -%}
+  </div>
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
+
+<!-- Load Text-to-Speech JavaScript -->
+<script src="{{ '/assets/js/text-to-speech.js' | relative_url }}"></script>
