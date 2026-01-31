@@ -36,6 +36,15 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+# Header navigation - only show major sections
+header_pages:
+  - _pages/learning-paths.md
+  - _pages/stories.md
+  - _pages/philosophy.md
+  - _pages/vedic-literature.md
+  - _pages/vedic-sciences.md
+  - _pages/quizzes.md
+
 # SEO settings
 author: Vedic Wisdom for Families
 social:

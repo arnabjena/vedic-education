@@ -90,42 +90,6 @@ permalink: /learning-paths/
   font-size: 1.1rem;
 }
 
-.finder-section {
-  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-  padding: 3rem 2rem;
-  border-radius: 20px;
-  text-align: center;
-  margin: 3rem 0;
-  box-shadow: 0 15px 40px rgba(250, 112, 154, 0.3);
-}
-
-.finder-section h2 {
-  color: white;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-}
-
-.finder-btn {
-  background: white;
-  color: #fa709a;
-  padding: 1rem 2.5rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.1rem;
-  display: inline-block;
-  margin-top: 1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
-
-.finder-btn:hover {
-  transform: scale(1.05);
-  text-decoration: none;
-  color: #fa709a;
-}
-
 .quick-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -169,15 +133,6 @@ permalink: /learning-paths/
 
 ---
 
-## 🔍 Not sure where to start?
-
-<div class="finder-section">
-  <h2>Find Your Perfect Learning Path</h2>
-  <p style="color: white; font-size: 1.1rem; opacity: 0.95;">Answer a few quick questions to discover which path suits you best</p>
-  <a href="#path-finder" class="finder-btn">Take the Path Finder Quiz →</a>
-</div>
-
----
 
 ## 📚 All Learning Paths
 
@@ -245,7 +200,7 @@ permalink: /learning-paths/
     <li><a href="{{ '/values/what-is-dharma/' | relative_url }}">3. What is Dharma?</a> (simplified)</li>
     <li><a href="{{ '/rituals/daily-puja-guide/' | relative_url }}">4. Daily Puja Guide</a> (participation)</li>
     <li><a href="{{ '/rituals/hindu-festivals-guide/' | relative_url }}">5. Hindu Festivals Guide</a> (celebrations)</li>
-    <li><a href="{{ '/puranas/dashavatara-ten-avatars/' | relative_url }}">6. Ten Avatars of Vishnu</a> (10 stories!)</li>
+    <li><a href="{{ '/puranas/dashavatara-ten-avatars-complete/' | relative_url }}">6. Ten Avatars of Vishnu</a> (10 stories!)</li>
     <li><a href="{{ '/philosophy/introduction-to-bhagavad-gita/' | relative_url }}">7. Bhagavad Gita</a> (simplified ethics)</li>
   </ol>
 
@@ -284,7 +239,7 @@ permalink: /learning-paths/
     <li><a href="{{ '/philosophy/introduction-to-bhagavad-gita/' | relative_url }}">5. Bhagavad Gita - Introduction</a></li>
     <li><a href="{{ '/values/four-goals-of-life/' | relative_url }}">6. Four Goals of Life</a> (moksha focus)</li>
     <li><a href="{{ '/vedic-literature/vedic-philosophy-core-concepts/' | relative_url }}">7. Vedic Philosophy: Core Concepts</a></li>
-    <li><a href="{{ '/vedic-literature/four-vedas-comprehensive-guide/' | relative_url }}">8. The Four Vedas</a></li>
+    <li><a href="{{ '/vedic-literature/the-four-vedas-comprehensive/' | relative_url }}">8. The Four Vedas</a></li>
     <li><a href="{{ '/puranas/introduction-to-puranas/' | relative_url }}">9. Introduction to the Puranas</a></li>
   </ol>
 
@@ -317,7 +272,7 @@ permalink: /learning-paths/
   <h4>📖 Reading Sequence:</h4>
   <ol class="path-steps">
     <li><a href="{{ '/vedic-literature/introduction-to-vedic-knowledge/' | relative_url }}">1. Introduction to Vedic Knowledge</a></li>
-    <li><a href="{{ '/vedic-literature/four-vedas-comprehensive-guide/' | relative_url }}">2. The Four Vedas</a> (scientific hymns)</li>
+    <li><a href="{{ '/vedic-literature/the-four-vedas-comprehensive/' | relative_url }}">2. The Four Vedas</a> (scientific hymns)</li>
     <li><a href="{{ '/vedic-sciences/vedic-mathematics-complete-guide/' | relative_url }}">3. Vedic Mathematics - Complete Guide</a></li>
     <li><a href="{{ '/vedic-sciences/vedic-astronomy-complete-guide/' | relative_url }}">4. Vedic Astronomy - Complete Guide</a></li>
     <li><a href="{{ '/vedic-sciences/ayurveda-introduction/' | relative_url }}">5. Ayurveda - Introduction</a></li>
@@ -435,7 +390,7 @@ permalink: /learning-paths/
     <li><a href="{{ '/philosophy/introduction-to-upanishads/' | relative_url }}">3. Upanishads</a> (self-knowledge)</li>
     <li><a href="{{ '/vedic-sciences/yoga-philosophy-and-practice/' | relative_url }}">4. Yoga Philosophy and Practice</a></li>
     <li><a href="{{ '/puranas/introduction-to-puranas/' | relative_url }}">5. Introduction to the Puranas</a> (devotional path)</li>
-    <li><a href="{{ '/puranas/dashavatara-ten-avatars/' | relative_url }}">6. Dashavatara</a> & <a href="{{ '/puranas/bhagavata-purana/' | relative_url }}">Bhagavata Purana</a></li>
+    <li><a href="{{ '/puranas/dashavatara-ten-avatars-complete/' | relative_url }}">6. Dashavatara</a> & <a href="{{ '/puranas/bhagavata-purana-srimad-bhagavatam/' | relative_url }}">Bhagavata Purana</a></li>
     <li><a href="{{ '/values/four-goals-of-life/' | relative_url }}">7. Four Goals of Life</a> (moksha as ultimate)</li>
     <li><a href="{{ '/modern-applications/vedic-stress-management/' | relative_url }}">8. Vedic Stress Management</a></li>
     <li><a href="{{ '/vedic-literature/major-upanishads-complete-guide/' | relative_url }}">9. Major Upanishads</a> (advanced)</li>
@@ -475,9 +430,9 @@ permalink: /learning-paths/
     <li><a href="{{ '/stories/krishna-dwarka-to-death/' | relative_url }}">3. Krishna - Dwarka to Death</a> (king and teacher)</li>
     <li><a href="{{ '/stories/mahabharata-introduction/' | relative_url }}">4. Mahabharata Introduction</a> (context for Gita)</li>
     <li><a href="{{ '/philosophy/introduction-to-bhagavad-gita/' | relative_url }}">5. Bhagavad Gita</a> (Krishna's philosophy)</li>
-    <li><a href="{{ '/puranas/bhagavata-purana/' | relative_url }}">6. Bhagavata Purana</a> (devotional text)</li>
+    <li><a href="{{ '/puranas/bhagavata-purana-srimad-bhagavatam/' | relative_url }}">6. Bhagavata Purana</a> (devotional text)</li>
     <li><a href="{{ '/stories/krishna-forms-and-avatars/' | relative_url }}">7. Krishna - Forms and Avatars</a></li>
-    <li><a href="{{ '/puranas/dashavatara-ten-avatars/' | relative_url }}">8. Dashavatara</a> (Krishna as 8th avatar)</li>
+    <li><a href="{{ '/puranas/dashavatara-ten-avatars-complete/' | relative_url }}">8. Dashavatara</a> (Krishna as 8th avatar)</li>
   </ol>
 
   <div class="path-outcome">
@@ -515,57 +470,6 @@ Not ready for a full path? Start with these foundational articles:
     <h4 class="quick-link-title">Core Text</h4>
     <p>Bhagavad Gita</p>
   </a>
-</div>
-
----
-
-## 🎯 Path Finder Quiz
-{: #path-finder}
-
-**Answer these questions to find your ideal learning path:**
-
-<div style="background: #f5f7fa; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
-
-**1. What draws you most to Vedic wisdom?**
-- A) Stories and mythology
-- B) Philosophy and consciousness
-- C) Science and knowledge
-- D) Daily practices and rituals
-- E) Ethical living and workplace
-- F) Spiritual growth and meditation
-
-**2. How much time can you dedicate?**
-- A) 1-2 hours (quick introduction)
-- B) 3-5 hours (solid foundation)
-- C) 6-10 hours (comprehensive study)
-- D) Ongoing (daily practice)
-
-**3. What's your current level?**
-- A) Complete beginner
-- B) Some basic knowledge
-- C) Familiar with concepts, want depth
-- D) Experienced practitioner
-
-**4. Who are you learning for?**
-- A) Just myself
-- B) My children (ages 6-12)
-- C) My whole family
-- D) Professional development
-- E) Spiritual community
-
----
-
-### Quiz Results:
-
-**Mostly A's → Children's Story Path** or **Krishna Journey Path**
-**Mostly B's → Philosophy Seeker Path** or **Spiritual Practitioner Path**
-**Mostly C's → Vedic Sciences Path**
-**Mostly D's → Family Practitioner Path** or **Beginner Path**
-**Mostly E's → Workplace Wisdom Path**
-**Mostly F's → Spiritual Practitioner Path**
-
-**Mixed answers?** Start with the **Complete Beginner Path**, then branch to specialized paths!
-
 </div>
 
 ---
