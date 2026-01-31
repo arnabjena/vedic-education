@@ -560,22 +560,24 @@ title: Welcome to Vedic Wisdom for Families
   <div class="hero-content">
     <div class="om-symbol">ॐ</div>
     <h1>Vedic Wisdom for Families</h1>
-    <p>Explore 3000+ years of Hindu knowledge, ancient sciences, epic stories, and timeless philosophy</p>
-    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-      <a href="{{ '/vedic-literature/' | relative_url }}" class="hero-cta">Vedic Literature</a>
-      <a href="{{ '/stories/' | relative_url }}" class="hero-cta">Epic Stories</a>
-      <a href="{{ '/philosophy/' | relative_url }}" class="hero-cta">Philosophy</a>
-      <a href="{{ '/quizzes/' | relative_url }}" class="hero-cta secondary">Quizzes</a>
+    <p>Authentic Hindu knowledge • Ancient sciences • Epic stories • Timeless philosophy</p>
+    <div style="display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+      <a href="{{ '/vedic-literature/' | relative_url }}" class="hero-cta" style="padding: 1rem 2rem; font-size: 1rem;">📚 Vedas</a>
+      <a href="{{ '/stories/' | relative_url }}" class="hero-cta" style="padding: 1rem 2rem; font-size: 1rem;">📖 Stories</a>
+      <a href="{{ '/philosophy/' | relative_url }}" class="hero-cta" style="padding: 1rem 2rem; font-size: 1rem;">🧘 Philosophy</a>
+      <a href="{{ '/vedic-sciences/' | relative_url }}" class="hero-cta" style="padding: 1rem 2rem; font-size: 1rem;">🔬 Sciences</a>
+      <a href="{{ '/history/' | relative_url }}" class="hero-cta" style="padding: 1rem 2rem; font-size: 1rem;">🏛️ History</a>
+      <a href="{{ '/quizzes/' | relative_url }}" class="hero-cta secondary" style="padding: 1rem 2rem; font-size: 1rem;">🎯 Quizzes</a>
     </div>
   </div>
 </div>
 
-<!-- Image Banner -->
+<!-- Image Banner - Hindu Temples Only -->
 <div class="image-banner">
-  <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400&h=300&fit=crop" alt="Ancient Indian Temple" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="https://images.unsplash.com/photo-1524230659092-07f99a75c013?w=400&h=300&fit=crop" alt="Hindu Deity" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=400&h=300&fit=crop" alt="Hindu Temple Architecture" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=400&h=300&fit=crop" alt="Temple Deity Statue" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="https://images.unsplash.com/photo-1582659149938-06cb2fc0f838?w=400&h=300&fit=crop" alt="Hindu Temple" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=400&h=300&fit=crop" alt="Hindu Temple Architecture" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=300&fit=crop" alt="Ancient Hindu Temple" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=400&h=300&fit=crop" alt="Hindu Temple Complex" style="filter: brightness(0.75) saturate(1.2);">
 </div>
 
 <!-- Stats Section -->
