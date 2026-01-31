@@ -561,12 +561,12 @@ title: Welcome to Vedic Wisdom for Families
     <div class="om-symbol">ॐ</div>
     <h1>Vedic Wisdom for Families</h1>
     <p>Authentic Hindu knowledge • Ancient sciences • Epic stories • Timeless philosophy</p>
-    <div style="display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+    <div style="display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <a href="{{ '/learning-paths/' | relative_url }}" class="hero-cta" style="padding: 1rem 2rem; font-size: 1rem; background: linear-gradient(135deg, #fa709a, #fee140); color: white;">🎯 Learning Paths</a>
       <a href="{{ '/vedic-literature/' | relative_url }}" class="hero-cta" style="padding: 1rem 2rem; font-size: 1rem;">📚 Vedas</a>
       <a href="{{ '/stories/' | relative_url }}" class="hero-cta" style="padding: 1rem 2rem; font-size: 1rem;">📖 Stories</a>
       <a href="{{ '/philosophy/' | relative_url }}" class="hero-cta" style="padding: 1rem 2rem; font-size: 1rem;">🧘 Philosophy</a>
       <a href="{{ '/vedic-sciences/' | relative_url }}" class="hero-cta" style="padding: 1rem 2rem; font-size: 1rem;">🔬 Sciences</a>
-      <a href="{{ '/history/' | relative_url }}" class="hero-cta" style="padding: 1rem 2rem; font-size: 1rem;">🏛️ History</a>
       <a href="{{ '/quizzes/' | relative_url }}" class="hero-cta secondary" style="padding: 1rem 2rem; font-size: 1rem;">🎯 Quizzes</a>
     </div>
   </div>
@@ -587,21 +587,75 @@ title: Welcome to Vedic Wisdom for Families
 <div class="stats-section">
   <div class="stats-grid">
     <div class="stat-card">
-      <span class="stat-number">28+</span>
+      <span class="stat-number">41</span>
       <div class="stat-label">Detailed Articles</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">8</span>
+      <div class="stat-label">Learning Paths</div>
     </div>
     <div class="stat-card">
       <span class="stat-number">5</span>
       <div class="stat-label">Interactive Quizzes</div>
     </div>
     <div class="stat-card">
-      <span class="stat-number">150</span>
-      <div class="stat-label">Quiz Questions</div>
-    </div>
-    <div class="stat-card">
       <span class="stat-number">9</span>
       <div class="stat-label">Categories</div>
     </div>
+  </div>
+</div>
+
+<!-- Learning Paths Section -->
+<div class="section" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(240, 147, 251, 0.05)); padding: 3rem 2rem; border-radius: 20px; margin: 3rem 0;">
+  <div class="section-header">
+    <h2>🎯 Choose Your Learning Path</h2>
+    <p>Not sure where to start? Follow a curated journey designed for your goals</p>
+  </div>
+
+  <div class="category-grid">
+    <a href="{{ '/learning-paths/#path-1-complete-beginner' | relative_url }}" class="category-card" style="--card-color-1: #667eea; --card-color-2: #764ba2;">
+      <h3>🌱 Complete Beginner</h3>
+      <p>Start from basics: dharma, karma, stories, and practices (3.5 hours)</p>
+    </a>
+
+    <a href="{{ '/learning-paths/#path-2-children-ages-6-12' | relative_url }}" class="category-card" style="--card-color-1: #ff9a9e; --card-color-2: #fecfef;">
+      <h3>👶 Children (6-12)</h3>
+      <p>Stories of heroes and gods with values naturally embedded (2-3 hours)</p>
+    </a>
+
+    <a href="{{ '/learning-paths/#path-3-philosophy-seeker' | relative_url }}" class="category-card" style="--card-color-1: #4facfe; --card-color-2: #00f2fe;">
+      <h3>🤔 Philosophy Path</h3>
+      <p>Deep dive into consciousness, Upanishads, and Bhagavad Gita (6-8 hours)</p>
+    </a>
+
+    <a href="{{ '/learning-paths/#path-4-science--knowledge' | relative_url }}" class="category-card" style="--card-color-1: #43e97b; --card-color-2: #38f9d7;">
+      <h3>🔬 Science Path</h3>
+      <p>Vedic mathematics, astronomy, Ayurveda, and knowledge systems (5-6 hours)</p>
+    </a>
+
+    <a href="{{ '/learning-paths/#path-5-family-practitioner' | relative_url }}" class="category-card" style="--card-color-1: #30cfd0; --card-color-2: #330867;">
+      <h3>👨‍👩‍👧‍👦 Family Path</h3>
+      <p>Daily practices, rituals, festivals, and teaching children (4-5 hours)</p>
+    </a>
+
+    <a href="{{ '/learning-paths/#path-6-professional--workplace' | relative_url }}" class="category-card" style="--card-color-1: #f857a6; --card-color-2: #ff5858;">
+      <h3>💼 Workplace Path</h3>
+      <p>Apply wisdom to career, ethics, and stress management (3 hours)</p>
+    </a>
+
+    <a href="{{ '/learning-paths/#path-7-spiritual-practitioner' | relative_url }}" class="category-card" style="--card-color-1: #764ba2; --card-color-2: #667eea;">
+      <h3>🙏 Spiritual Path</h3>
+      <p>Advanced practice: yoga, meditation, devotion, and liberation (8-10 hours)</p>
+    </a>
+
+    <a href="{{ '/learning-paths/#path-8-krishna-connection' | relative_url }}" class="category-card" style="--card-color-1: #667eea; --card-color-2: #764ba2;">
+      <h3>🎭 Krishna Journey</h3>
+      <p>Follow Krishna's life from childhood to Bhagavad Gita teacher (4-5 hours)</p>
+    </a>
+  </div>
+
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="{{ '/learning-paths/' | relative_url }}" class="hero-cta" style="padding: 1.2rem 3rem; font-size: 1.2rem;">View All Learning Paths →</a>
   </div>
 </div>
 
