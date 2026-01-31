@@ -183,13 +183,13 @@ class TextToSpeech {
 // Initialize TTS when DOM is ready
 let ttsInstance = null;
 
-document.addEventListener('DOMContentLoaded', function() {
+function initializeTTS() {
   // Check if browser supports Speech Synthesis
   if (!('speechSynthesis' in window)) {
     console.warn('Text-to-Speech not supported in this browser');
     const listenSection = document.querySelector('.listen-controls');
     if (listenSection) {
-      listenSection.innerHTML = '<p><em>Text-to-Speech is not supported in your browser. Please try Chrome, Safari, Edge, or Firefox.</em></p>';
+      listenSection.innerHTML = '<p style="color: #dc3545; padding: 15px;"><em>Text-to-Speech is not supported in your browser. Please try Chrome, Safari, Edge, or Firefox.</em></p>';
     }
     return;
   }
@@ -227,4 +227,12 @@ document.addEventListener('DOMContentLoaded', function() {
       ttsInstance.stop();
     }
   });
-});
+}
+
+// Try multiple initialization methods for better compatibility
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeTTS);
+} else {
+  // DOM already loaded
+  initializeTTS();
+}
