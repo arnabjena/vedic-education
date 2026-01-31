@@ -572,12 +572,12 @@ title: Welcome to Vedic Wisdom for Families
   </div>
 </div>
 
-<!-- Image Banner - Hindu Temples Only -->
+<!-- Image Banner - South Indian Temples Only -->
 <div class="image-banner">
-  <img src="https://images.unsplash.com/photo-1582659149938-06cb2fc0f838?w=400&h=300&fit=crop" alt="Hindu Temple" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=400&h=300&fit=crop" alt="Hindu Temple Architecture" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=300&fit=crop" alt="Ancient Hindu Temple" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=400&h=300&fit=crop" alt="Hindu Temple Complex" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="https://images.unsplash.com/photo-1582659149938-06cb2fc0f838?w=400&h=300&fit=crop" alt="South Indian Temple Gopuram" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=400&h=300&fit=crop" alt="Meenakshi Temple Architecture" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=300&fit=crop" alt="Ancient South Indian Temple" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=400&h=300&fit=crop" alt="Dravidian Temple Complex" style="filter: brightness(0.75) saturate(1.2);">
 </div>
 
 <!-- Stats Section -->
