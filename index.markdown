@@ -6,7 +6,8 @@ title: Welcome to Vedic Wisdom for Families
 <style>
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+  background: linear-gradient(rgba(102, 126, 234, 0.85), rgba(118, 75, 162, 0.85)),
+              url('{{ "/assets/images/temples/south-indian-temple.jpg" | relative_url }}') center/cover;
   color: white;
   padding: 5rem 2rem;
   text-align: center;
@@ -572,12 +573,12 @@ title: Welcome to Vedic Wisdom for Families
   </div>
 </div>
 
-<!-- Image Banner - South Indian Temples Only -->
+<!-- Image Banner - Hindu Temples from Pexels (Free) -->
 <div class="image-banner">
-  <img src="https://images.unsplash.com/photo-1582659149938-06cb2fc0f838?w=400&h=300&fit=crop" alt="South Indian Temple Gopuram" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=400&h=300&fit=crop" alt="Meenakshi Temple Architecture" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=300&fit=crop" alt="Ancient South Indian Temple" style="filter: brightness(0.75) saturate(1.2);">
-  <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=400&h=300&fit=crop" alt="Dravidian Temple Complex" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="{{ '/assets/images/temples/colorful-gopuram.jpg' | relative_url }}" alt="Colorful Hindu Temple Gopuram" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="{{ '/assets/images/temples/temple-architecture.jpg' | relative_url }}" alt="Hindu Temple Architecture" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="{{ '/assets/images/temples/ancient-temple.jpg' | relative_url }}" alt="Ancient Hindu Temple" style="filter: brightness(0.75) saturate(1.2);">
+  <img src="{{ '/assets/images/temples/temple-sunset.jpg' | relative_url }}" alt="Hindu Temple at Sunset" style="filter: brightness(0.75) saturate(1.2);">
 </div>
 
 <!-- Stats Section -->
