@@ -20,10 +20,11 @@
       return;
     }
 
-    // Find all h2 and h3 headings within the content
-    const headings = content.querySelectorAll('h2, h3');
+    // Find only h2 headings (major sections) within the content
+    const headings = content.querySelectorAll('h2');
 
-    if (headings.length < 3) {
+    // Show TOC only if there are at least 2 major sections
+    if (headings.length < 2) {
       return;
     }
 
@@ -51,7 +52,7 @@
 
     const tocDescription = document.createElement('div');
     tocDescription.className = 'toc-description';
-    tocDescription.textContent = 'Jump to any section:';
+    tocDescription.textContent = 'Jump to major sections:';
 
     const linksContainer = document.createElement('div');
     linksContainer.className = 'toc-links';

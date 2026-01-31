@@ -737,20 +737,6 @@ tr:nth-child(even) {
   text-decoration: none;
 }
 
-.toc-link.toc-level-h3 {
-  font-size: 0.85rem;
-  padding: 6px 14px;
-  background: #fff5e6;
-  border: 1px solid #FFB366;
-  color: #CC7A00;
-}
-
-.toc-link.toc-level-h3:hover {
-  background: #FFB366;
-  color: white;
-  border-color: #FFB366;
-}
-
 @media (max-width: 768px) {
   .table-of-contents {
     padding: 15px 18px;
