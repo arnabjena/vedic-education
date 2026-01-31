@@ -394,7 +394,24 @@ tr:nth-child(even) {
    RESPONSIVE DESIGN
    ============================================ */
 
+/* Fix for mobile header overlap */
 @media screen and (max-width: 600px) {
+  /* Ensure header has proper z-index */
+  .site-header {
+    position: relative;
+    z-index: 100;
+  }
+
+  /* Add top margin to main content to prevent overlap */
+  .page-content {
+    margin-top: 1rem;
+  }
+
+  /* Ensure hero section on homepage has proper spacing */
+  .hero-section {
+    margin-top: 1rem;
+  }
+
   .site-title {
     font-size: 1.4rem !important;
   }
